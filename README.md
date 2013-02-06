@@ -39,7 +39,10 @@ Run
 
 In development:
 
-Simply launch `ruby_geo_ip.rb`, it will start a Sinatra app (on port 4567 by default).
+Simply launch `./ruby_geo_ip.rb`, it will start a Sinatra app (on port 4567 by default).
+
+*Production:*
+Some tips about configuration in production will be added. But it's just a sinatra app :)
 
 Usage
 -----
@@ -50,7 +53,22 @@ This _damn simple_ software just expose the root path to direct request, e.g.:
 
 will return
 ```json
-{"request":"64.71.22.18","ip":"64.71.22.18","country_code2":"US","country_code3":"USA","country_name":"United States","continent_code":"NA","region_name":"CA","city_name":"Santa Clara","postal_code":"95054","latitude":37.39609999999999,"longitude":-121.96170000000001,"dma_code":807,"area_code":408,"timezone":"America/Los_Angeles"}
+{
+  "request"=>"64.71.22.18",
+  "ip"=>"64.71.22.18",
+  "country_code2"=>"US",
+  "country_code3"=>"USA",
+  "country_name"=>"United States",
+  "continent_code"=>"NA",
+  "region_name"=>"CA",
+  "city_name"=>"Santa Clara",
+  "postal_code"=>"95054",
+  "latitude"=>37.39609999999999,
+  "longitude"=>-121.96170000000001,
+  "dma_code"=>807,
+  "area_code"=>408,
+  "timezone"=>"America/Los_Angeles"
+}
 ```
 
 
